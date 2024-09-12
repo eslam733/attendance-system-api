@@ -60,14 +60,6 @@ git clone git@github.com:eslam733/attendance-system-api.git
 cd attendance-system-api
 ```
 
-### 📦 First-Time Setup: Adding the MySQL Initialization File
-Add your MySQL initialization SQL file to this path with the name init_db.sql:
-```
-docker-compose/mysql/init_db.sql
-```
-🚨 Important Note
-This step is only required the first time you set up the project or if you need to reinitialize the database.
-
 ### Step 2: Build the Docker Image with Docker Compose
 
 ```
