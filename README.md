@@ -86,8 +86,6 @@ docker-compose exec app /bin/bash
 php artisan migrate
 ```
 
-### Access the platform:
-`http://localhost:8000/`
 ### Access the database here:
 `http://127.0.0.1:8082/`
 
