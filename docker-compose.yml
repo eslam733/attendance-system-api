@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+    app:
+        build:
+            context: .
+        ports:
+            - "8000:80"  # Access the Laravel app at http://localhost:8000
+        volumes:
+            - .:/var/www/html:cached
+            - /var/www/html/bootstrap
+            - /var/www/html/storage
+        environment:
+            - APP_ENV=local
+            - APP_DEBUG=true
+            - APP_URL=http://localhost:8080
+            - DB_HOST=db
+            - DB_PORT=3306
+            - DB_DATABASE=laravel
+            - DB_USERNAME=root
+            - DB_PASSWORD=root
+        depends_on:
+            - db
+
+    db:
+        image: mysql:5.7
+        command: --default-authentication-plugin=mysql_native_password
+        ports:
+            - "3307:3306"  # MySQL port
+        environment:
+            - MYSQL_DATABASE=laravel
+            - MYSQL_ROOT_PASSWORD=root
+        volumes:
+            - dbdata:/var/lib/mysql
+#            - ./docker-compose/mysql/init_db.sql:/docker-entrypoint-initdb.d/init.sql
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - "8082:80"  # Access phpMyAdmin at http://localhost:8081
+        environment:
+            - PMA_HOST=db
+            - PMA_PORT=3306
+        depends_on:
+            - db
+
+volumes:
+    dbdata:
