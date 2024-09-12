@@ -57,7 +57,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ### Step 1: Clone the Repository
 ```
 git clone git@github.com:eslam733/attendance-system-api.git
-cd platform
+cd attendance-system-api
 ```
 
 ### 📦 First-Time Setup: Adding the MySQL Initialization File
