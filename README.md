@@ -56,7 +56,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ### Step 1: Clone the Repository
 ```
-git clone https://github.com/Sprints-ai/platform.git
+git clone git@github.com:eslam733/attendance-system-api.git
 cd platform
 ```
 
