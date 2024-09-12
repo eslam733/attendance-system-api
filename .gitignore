@@ -1,11 +1,9 @@
-node_modules/
 npm-debug.log
 yarn-error.log
 .phpunit.result.cache
 /nbproject/private/
 nbproject/*
 .vs/*
-/vendor
 .env
 .env.testing
 .idea
