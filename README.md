@@ -83,6 +83,11 @@ docker-compose ps
 ```
 docker-compose exec app /bin/bash
 ```
+## Migrate the database
+```
+php artisan migrate
+```
+
 ### Access the platform:
 `http://localhost:8000/`
 ### Access the database here:
