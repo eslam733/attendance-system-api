@@ -11,6 +11,7 @@ services:
             - /var/www/html/bootstrap
             - /var/www/html/storage
         environment:
+            - DB_CONNECTION=mysql
             - APP_ENV=local
             - APP_DEBUG=true
             - APP_URL=http://localhost:8080
