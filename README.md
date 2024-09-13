@@ -46,7 +46,7 @@ sudo docker --version
 sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
-### Step 8: install docker-compose
+### Step 8: Install docker-compose
 ```
 sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
